@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data compile</title>
+    
+    <link rel="stylesheet" href="Styltrst.css">
+    <style>
+
+      .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5%; /* Ajusta el relleno utilizando unidades relativas */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas de tamaño automático */
+    grid-gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%; /* Utiliza porcentajes para el ancho de la tarjeta */
+    max-width: 450px; /* Establece un ancho máximo */
+    margin: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%; /* Haz que las imágenes sean responsivas */
+    height: auto; /* Evita distorsiones en las imágenes */
+}
+
+.container .card .content {
+    padding: 20px; /* Ajusta el relleno utilizando unidades relativas */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0b7dda;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del flexbox en dispositivos móviles */
+        align-items: center; /* Centra los elementos en dispositivos móviles */
+        word-wrap: break-word;
+        max-width: 60%;
+    }
+
+    .card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en dispositivos móviles */
+        margin: 15px 0; /* Ajusta los márgenes */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="https://salesiana.edu.co/" ><img  src="sal.png" alt="Logo de la Empresa" class="logo" id="banner" ></a>
+
+<br><br>
+    
+<h1>Compilado de DataStudios Salesiana 2410</h1>
+
+
+
+<button id="toggle-menu">☰</button>
+
+<div class="container"><nav id="sidebar">
+        <ul>
+
+            <li><a href="#" onclick="restablecerFiltros()">Restablecer filtros</a></li>
+            <li><a href="#" onclick="filtrar('card1')">Coordinación de Estudiantes</a></li>
+            <li><a href="#" onclick="filtrar('card2')">Admisiones y Registro</a></li>
+            <li><a href="#" onclick="filtrar('card3')">Comunicaciones y Mercadeo</a></li>
+            
+        </ul>
+    </nav></div>
+    
+</header>
+
+<section id="fila">
+<div class="mosaico">
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card1" id="tarjeta1_card1">
+        <img src="Captura de pantalla 2024-03-11 090134.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Coordinación de Estudiantes</h4>
+            <p>DataStudio para la visualización de las notas de los estudiantes según corte.</p>
+            <p>coordinacionestudiantes@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/9a445b06-a11a-4775-a8b4-1858079fdad5" ><button class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+
+
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card2" id="tarjeta1_card2">
+        <img src="Captura de pantalla 2024-03-11 103911.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Admisiones y Registro</h4>
+            <p>DataStudio para la visualización de aspirantes a estudiantes nuevos.</p>
+            <p>admisionesyregistro@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/8a36289f-93d5-4a60-991f-7a3f7a240cb6"><button class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card3" id="tarjeta1_card3">
+        <img src="Captura de pantalla 2024-03-11 103932.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Comunicaciones y Mercadeo</h4>
+            <p>DataStudio para la visualización de aspirantes y condiciones.</p>
+            <p>comunicaciones@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/8a36289f-93d5-4a60-991f-7a3f7a240cb6"><button  class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+</div>
+
+
+</section>
+
+<section id="fila">
+<div class="mosaico">
+
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card1" id="tarjeta1_card1">
+        <img src="Captura de pantalla 2024-03-11 090134.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Cordinación de Estudiantes</h4>
+            <p>DataStudio para la visualización de las notas de los estudiantes según corte.</p>
+            <p>Correo: coordinacionestudiantes@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/9a445b06-a11a-4775-a8b4-1858079fdad5"><button  class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+
+
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card2" id="tarjeta1_card2">
+        <img src="Captura de pantalla 2024-03-11 103911.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Admisiones y Registro</h4>
+            <p>DataStudio para la visualización de aspirantes a estudiantes nuevos.</p>
+            <p>Correo: admisionesyregistro@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/8a36289f-93d5-4a60-991f-7a3f7a240cb6"><button  class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+<div class="container">
+    <!-- Repite este bloque para cada tarjeta, ajustando los datos según sea necesario -->
+    <div class="card card3" id="tarjeta1_card3">
+        <img src="Captura de pantalla 2024-03-11 103932.png" alt="Imagen 1">
+        <div class="content">
+            <h4>Comunicaciones y Mercadeo</h4>
+            <p>DataStudio para la visualización de aspirantes y condiciones.</p>
+            <p>Correo: comunicaciones@salesiana.edu.co</p>
+            <a href="https://lookerstudio.google.com/reporting/8a36289f-93d5-4a60-991f-7a3f7a240cb6"><button  class="button">Acceder</button></a>
+        </div>
+    </div>
+    <!-- Asegúrate de tener 6 tarjetas aquí, cambiando los números de id y los datos correspondientes -->
+</div>
+
+</div>
+</section>
+
+<script src="scripttrst.js" ></script>
+</body>
+</html>

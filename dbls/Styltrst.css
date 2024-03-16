@@ -1,0 +1,282 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: bottom 0.3s ease; /* Agregamos una transición suave */
+}
+
+        footer {
+            position: fixed;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            transition: bottom 0.3s ease; /* Agrega una transición suave */
+        }
+
+        /* Agrega este CSS para mostrar el footer cuando se desplace el cursor sobre el área oculta */
+        .footer-trigger {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px; /* Altura del área de activación del cursor */
+            background-color: transparent; /* Hace que el área de activación sea transparente */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el área de activación */
+        }
+
+.mosaico {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.mosaico a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mosaico img {
+    width: 100%;
+    height: auto;
+}
+
+.mosaico img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Agregamos una transición suave para el efecto */
+}
+
+.mosaico img:hover {
+    transform: scale(1.7); /* Hace zoom in en un 20% cuando el cursor pasa sobre la imagen */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px; /* Tamaño de fuente base */
+}
+
+/* Media query para dispositivos más pequeños */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Reducción del relleno en dispositivos más pequeños */
+        font-size: 16px; /* Reducción del tamaño de fuente en dispositivos más pequeños */
+    }
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: lightgray;
+}
+
+/* Estilos generales */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Estilos para tabletas */
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Estilos para teléfonos móviles */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilos para el logo */
+.logo {
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 150px;
+    transition: left 0.3s ease;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Estilos para el botón de desplegar/replegar */
+#toggle-menu {
+    position: fixed;
+    top: 68px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+header h1 {
+    margin-left: 80px; /* Ajusta este valor según sea necesario */
+}
+
+#banner {
+
+    margin-left: 50px;
+
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Estilos para tabletas */
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Estilos para teléfonos móviles */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 10px; /* Reducir el relleno del encabezado en dispositivos móviles */
+    }
+
+    #toggle-menu {
+        top: 10px; /* Ajustar la posición del botón de desplegar/replegar */
+        left: 10px;
+    }
+
+    header h1 {
+        margin-left: 20px; /* Ajustar el margen izquierdo del título en dispositivos móviles */
+    }
+
+    #banner {
+        margin-left: 20px; /* Ajustar el margen izquierdo del banner en dispositivos móviles */
+    }
+
+    #sidebar {
+        padding-top: 100px; /* Ajustar el relleno superior del sidebar en dispositivos móviles */
+    }
+
+    #sidebar ul li a {
+        padding: 8px; /* Ajustar el relleno de los enlaces en dispositivos móviles */
+    }
+}
+
+p {
+    overflow-wrap: break-word; /* Permite que el texto se envuelva automáticamente */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Columnas de tamaño automático */
+    grid-gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
